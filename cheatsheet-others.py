@@ -74,7 +74,9 @@ print 'random.choice(["mert", "gunay", "kth"]) = ' + str(a)
 a = random.sample(["mert", "gunay", "kth", "stockholm"], 2)
 print 'random.sample(["mert", "gunay", "kth", "stockholm"], 2) = ' + str(a)
 
-
+a = [1, 2, 3, 4]
+random.shuffle(a)
+print a
 
 # ____  _ _     _                   _   
 # | __ )(_) |_  | |    _____   _____| |  

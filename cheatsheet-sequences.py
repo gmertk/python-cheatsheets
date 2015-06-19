@@ -172,4 +172,4 @@ print 'a = [0, 1, 2, 3] - after del a[2], a becomes ' + str(a)
 # del seq[start:stop[:step]] : remove items from sequence
 a = [0, 1, 2, 3]
 del a[1:3]
-print 'a = [0, 1, 2, 3] - after del a[1:3], a becomes ' + str(a)
+print a  # [0, 3]
