@@ -75,15 +75,25 @@ print 'a = [5, 2, 3, 1, 4] and sorted(a) returns a new sorted list ' + str(sorte
 print sorted("a test string Mert gunay".split(), key=str.lower)
 
 student_tuples = [
-    ('john', 'A', 15),
-    ('jane', 'B', 12),
-    ('dave', 'B', 10),
+   ('john', 'A', 15),
+   ('jane', 'B', 12),
+   ('dave', 'B', 10),
 ]
+
+student_objects = [
+   Student('john', 'A', 15),
+   Student('jane', 'B', 12),
+   Student('dave', 'B', 10),
+]
+
 print sorted(student_tuples, key=lambda student: student[2])   # sort by age
 
 from operator import itemgetter, attrgetter, methodcaller
 print sorted(student_tuples, key=itemgetter(2))
 print sorted(student_tuples, key=itemgetter(1,2))
+
+print sorted(student_objects, key=attrgetter('age'))
+print sorted(student_objects, key=attrgetter('grade', 'age'))
 
 # map(fct,sequence,...) -> list: new list where ith item is fct(ith items of sequence(s))
 celsius = [39.2, 36.5]
