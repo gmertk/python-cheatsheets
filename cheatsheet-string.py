@@ -57,10 +57,14 @@ print a  # ['m', 'rte']
 a = 'mert'.endswith('rt')
 print a  # True
 
-# s.startswith(suffix[,start[,end]]) -> bool: test text begining->
+# s.startswith(suffix[,start[,end]]) -> bool: test text begining
 a = 'mert'.startswith('m')
 print a  # True
 
 # s.strip([chars]) -> string text with leading+trailing chars removed
 a = 'mertddeeeddeeeefff'.strip('fed')
 print a  # mert
+
+# s.replace(s, old, new[, maxreplace])
+a = ' hello   mert '.replace(' ', '')
+print a # 'hellomert'
